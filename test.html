@@ -1,0 +1,57 @@
+<html>
+<script src="http://dwa012.github.io/html5-qrcode/javascripts/jquery-1.9.1.min.js"></script>
+<script src="http://dwa012.github.io/html5-qrcode/javascripts/html5-qrcode.min.js"></script>
+
+Now add this line inside body tag in your HTML file. Webcam video will be displayed in this div.
+
+<div id="reader" style="width:500px;height:340px"></div>
+<video width="300" height="150" id="cam" controls="controls" autoplay="autoplay"></video>
+<script>
+
+
+window.addEventListener('load',camara);
+
+function camara(){
+
+
+var video = document.getElementById('cam');
+
+
+
+navigator.getUserMedia = (navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.msGetUserMedia || navigator.mozGetUserMedia);
+
+if(navigator.getUserMedia){
+
+navigator.getUserMedia({audio:true,video:true},function(videocam){
+
+
+video.src = window.URL.createObjectURL(videocam);
+
+
+video.play();
+},
+
+
+function (e){
+  console.log(e);
+ });
+    }else{
+       alert('tu navegador no es compatible');
+       }
+ }
+
+</script>
+<script>
+        $(document).ready(function () {
+            $('#reader').html5_qrcode(function (data) {
+                alert(data);
+            },
+                function (error) {
+                    alert("error de lectura");
+                }, function (videoError) {
+                    alert("No hay cámara");
+                }
+            );
+        });
+    </script>
+</html>
