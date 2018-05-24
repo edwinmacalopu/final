@@ -6,10 +6,30 @@
     <script src="https://raw.githubusercontent.com/dwa012/html5-qrcode/master/lib/html5-qrcode.min.js"></script>
   </head>
   <body>
-    <div id="reader" style="width:300px;height:250px">
-    </div>
+    <div id="container">
+	    <video autoplay="true" id="videoElement">
+
+	    </video>
+</div>
+    <script>
+	 var video = document.querySelector("#videoElement");
+
+	navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+	if (navigator.getUserMedia) {
+	    navigator.getUserMedia({video: true}, handleVideo, videoError);
+	}
+
+	function handleVideo(stream) {
+	    video.src = window.URL.createObjectURL(stream);
+	}
+
+	function videoError(e) {
+	    // do something
+	}
+</script>
       <script>
-      $('#reader').html5_qrcode(function(data){
+      $('#videoElement').html5_qrcode(function(data){
      // do something when code is read
         },
         function(error){
