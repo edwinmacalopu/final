@@ -3,8 +3,8 @@
 <head>
 <script type="text/javascript">
   function EncodeDecode () {
-          span = document.getElementById ("dbr");
-           decodedData = window.atob (span.value);
+          string = document.getElementById ("dbr").innerHTML;
+           decodedData = window.atob (string);
               alert ("decoded data: " + decodedData);
   }
 </script>
