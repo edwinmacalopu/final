@@ -5,7 +5,7 @@
 <head>
 <style>
 .button {
-    background-color: #008CBA; /* Green */
+    background-color: #2196F3; /* azul */
     border: none;
     color: white;
     padding: 15px 32px;
@@ -16,6 +16,7 @@
     margin: 4px 2px;
     cursor: pointer;
 }
+.button3 {background-color: #4CAF50;}
 </style>
 
 <script type="text/javascript">
@@ -32,13 +33,13 @@
 <body>
 <center>
   <h1>QRCODE NOTARIAL</h1>
-    <button class="button" onclick="EncodeDecode ();">DESENCRIPTAR CODIGO</button>
+    <button class="button button3" onclick="EncodeDecode ();">DESENCRIPTAR CODIGO</button>
 <div>QR CODE ENCRYPTE: <span id="dbr"></span></div>
   <div class="select">
     <label for="videoSource">Video opciones: </label><select id="videoSource"></select>
   </div>
 
-   <button id="go">LEER QR</button>
+   <button class="button button3" id="go">LEER QR</button>
   <div>
     <video muted autoplay id="video"></video>
     <canvas id="pcCanvas" width="640" height="480" style="display: none; float: bottom;"></canvas>
