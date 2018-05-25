@@ -26,9 +26,9 @@
 </form>
 <script>
 function myFunction() {
-     var dbr = document.getElementById("dbr");
-
-    dbr.innerHTML = atob(encoded);
+        input = document.getElementById ("dbr");
+         decodedData = window.atob (encodedData);
+            alert ("decoded data: " + decodedData);
 }
 </script>
 <script async src="zxing.js"></script>
