@@ -18,14 +18,21 @@
     <canvas id="mobileCanvas" width="240" height="320" style="display: none; float: bottom;"></canvas>
   </div>
    <div>QR CODE ENCRYPTE: <span id="dbr"></span></div>
-
-
+<button onclick="myFunction()">DECIFRAR</button>
    </div>
 
 </body>
 
 </form>
+<script>
+function myFunction() {
+     var dec = window.atob(dbr);
 
+    var res =dec;
+    document.getElementById("demo").innerHTML = res;
+}
+</script>
 <script async src="zxing.js"></script>
 <script src="video.js"></script>
+
 </html>
