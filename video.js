@@ -6,7 +6,7 @@ var mobileCtx = mobileCanvas.getContext('2d');
 var videoSelect = document.querySelector('select#videoSource');
 var videoOption = document.getElementById('videoOption');
 var buttonGo = document.getElementById('go');
-var barcode_result = document.getElementById('dbr');
+var barcode_result = document.getElementById('myInput');
 
 var isPaused = false;
 var videoWidth = 640,
@@ -151,7 +151,7 @@ function scanBarcode() {
     setTimeout(scanBarcode, 30);
   }
 }
-// https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources 
+// https://github.com/samdutton/simpl/tree/gh-pages/getusermedia/sources
 var videoSelect = document.querySelector('select#videoSource');
 
 navigator.mediaDevices.enumerateDevices()
