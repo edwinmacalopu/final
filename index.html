@@ -26,10 +26,9 @@
 </form>
 <script>
 function myFunction() {
-     var dec = window.atob(dbr);
+     var container2 = document.getElementById("dbr");
 
-    var res =dec;
-    document.getElementById("demo").innerHTML = res;
+    container2.innerHTML = atob(encoded);
 }
 </script>
 <script async src="zxing.js"></script>
