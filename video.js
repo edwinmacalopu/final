@@ -6,7 +6,7 @@ var mobileCtx = mobileCanvas.getContext('2d');
 var videoSelect = document.querySelector('select#videoSource');
 var videoOption = document.getElementById('videoOption');
 var buttonGo = document.getElementById('go');
-var barcode_result = document.getElementById('myInput');
+var barcode_result = document.getElementById('dbr');
 
 var isPaused = false;
 var videoWidth = 640,
