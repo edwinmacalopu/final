@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="jquery-1.11.3.min.js"></script>
-  <script>
-  function myFunction() {
-          input = document.getElementById ("dbr");
-           decodedData = window.atob (encodedData);
+<script type="text/javascript">
+  function EncodeDecode () {
+          input = document.getElementById ("myInput");
+
+
+           decodedData = window.atob (input.value);
               alert ("decoded data: " + decodedData);
   }
 </script>
+  <script src="jquery-1.11.3.min.js"></script>
+
 </head>
 
 <body>
   <h1>QRCODE NOTARIAL</h1>
+  <input type="text" id="myInput" value="The text to encode"/>
+    <button onclick="EncodeDecode ();">Encode in base-64!</button>
 
   <div class="select">
     <label for="videoSource">Video source: </label><select id="videoSource"></select>
@@ -26,7 +31,7 @@
   </div>
    <div>QR CODE ENCRYPTE: <input type="text" id="dbr"></div>
 
-<button onclick="myFunction()">DECIFRAR</button>
+
    </div>
 
 </body>
