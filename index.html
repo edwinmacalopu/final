@@ -2,6 +2,13 @@
 <html>
 <head>
   <script src="jquery-1.11.3.min.js"></script>
+  <script>
+  function myFunction() {
+          input = document.getElementById ("dbr");
+           decodedData = window.atob (encodedData);
+              alert ("decoded data: " + decodedData);
+  }
+</script>
 </head>
 
 <body>
@@ -25,13 +32,7 @@
 </body>
 
 </form>
-<script>
-function myFunction() {
-        input = document.getElementById ("dbr");
-         decodedData = window.atob (encodedData);
-            alert ("decoded data: " + decodedData);
-}
-</script>
+
 <script async src="zxing.js"></script>
 <script src="video.js"></script>
 
