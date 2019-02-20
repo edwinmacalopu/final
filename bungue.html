@@ -9,18 +9,18 @@
 
 <script>
 var x = document.getElementById("demo");
-
-
+var z= document.getElementById("demo").innerHTML;
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(showPosition);
-  } else { 
+  } else {
     x.innerHTML = "Geolocation is not supported by this browser.";
   }
 
-    
+
 function showPosition(position) {
-    x.innerHTML="Latitude: " + position.coords.latitude + 
+x.innerHTML="Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
+    window.open("https://www.w3schools.com");
 }
 </script>
 
