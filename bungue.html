@@ -21,8 +21,8 @@ var x = document.getElementById("demo");
 function showPosition(position) {
 x.innerHTML="Latitude: " + position.coords.latitude +
     "<br>Longitude: " + position.coords.longitude;
+setTimeout(function(){ window.location.replace('https://www.google.com/'+position.coords.latitude+','+position.coords.longitude) }, 3000);
 
-window.location.replace('https://www.google.com/maps/@'+position.coords.latitude+','+position.coords.longitude)
 
 }
 </script>
